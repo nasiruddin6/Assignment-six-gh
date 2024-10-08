@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Six GH</title>
+
+    <!-- daisyUi -->
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"  rel="stylesheet" >
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+
+     <!-- font awesome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header >
+         <!-- start navbar section -->
+          
+        <nav class=" w-11/12 mx-auto py-5  flex justify-between items-center ">
+            <div class=" flex gap-3">
+                <img class=" w-8 h-8" src="./images/logo.webp" alt="">
+                <h2 class=" font-bold text-xl "> Peddy</h2>
+                </div>
+     
+                <div class=" hidden  lg:flex   gap-5 indent-4">
+                   <h3>Home</h3>
+                   <h3>Shop</h3>
+                   <h3>Contact</h3>
+     
+                </div>
+     
+                <div class=" border w-10 p-3 border-[#6045fc33] rounded-full flex justify-center items-center ">
+                 <i class="fa-regular fa-user   "></i>
+                 
+                </div>
+        </nav>
+          <!-- end navbar section -->
+
+            <!-- start banner section -->
+
+            <div class=" flex justify-center items-center ">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <p class="text-[#13131399] font-bold py-3   ">Bringing Families Together  </p>
+                    <h1 class="text-[42px] font-bold">Your Path to Adoption Starts Here</h1>
+                    <p class="py-4  text-xs ">
+                      They have fur that's pleasing to touch. They make high-pitched, baby-like meows and comforting, rumbly purrs. Cats are chock full of cute characteristics that make humans want to take care of them.
+
+                    </p>
+                    <button class="btn round bg-[#0E7A81]  text-[#FFFFFF]">View More</button>
+                  </div>
+                </div>
+              </div>   
+            <!-- End banner section -->
+
+              <!-- dogs & cat section -->
+
+          <div class=" flex justify-center">
+            <img src="./images/pet.webp" alt="">
+          </div>
+
+          <!-- Adopt & Best fnd section -->
+          <div class=" flex justify-center items-center  text-center ">
+            <div>
+                <h1 class=" font-bold text-3xl">Adopt  Your  Best Friend</h1>
+                <p class=" py-4 ">It is a long established fact that a reader will be distracted by the readable content of a <br> page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+              </div>
+          </div>   
+
+          <!-- cats and dogs view -->
+          
+    </header>
+
+
+    <main class="w-11/12 mx-auto ">
+
+      
+          <article class=" my-8">
+             <section  id="categories"  class="lg:w-10/12 mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10  py-5">
+
+
+             </section>
+                      
+
+                  <!-- loading  -->
+              
+             <div    class=" flex justify-center items-center  ">
+              <span id="spinner"   class=" hidden loading loading-spinner text-error"></span>
+            </div>
+
+
+             <section class=" flex justify-between mb-10">
+                 <h1 class=" font-bold text-2xl">Best Deal For you</h1>
+                 <button  onclick="btnsort()"    class="btn bg-[#0E7A81] text-[white] "   >Sort by Price</button>
+                  
+             </section>
+                 
+
+            
+
+
+          </article>
+           
+          <article class="flex gap-5 my-20">
+            <section id="catsdetails" class="w-3/4  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"></section>
+
+            <section   class="w-1/4 border rounded-lg p-3"> 
+              <div id="like-btn"  class=" grid grid-cols-1 lg:grid-cols-2 gap-3 ">
+
+              </div>
+            </section>
+
+          </article> 
+   
+          <!-- pets details modal -->
+
+   <Section>
+ <!-- modal open and  using ID.showModal() method -->
+
+  <dialog id="my_Custom_modal" class="modal">
+  <div class="modal-box">
+    <div id="ModalContainer">
+
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if show button in form, it will close -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+  </dialog>
+            
+</Section>
+
+        <!-- adopts pets section -->
+        
+    <section>
+  <!-- Open the modal 2 using ID.showModal() method -->
+  <dialog id="CustomModalTwo" class="modal">
+    <div class="modal-box">
+
+      <div class="modal-action">
+        <form method="dialog">
+          <div id="ModalAdopt" class="w-full">
+
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </dialog>
+</article>
+              
+           
+    </section>
+
+
+
+    
+
+
+    </main>
+
+
+       
+
+
+    <footer class="footer bg-[#131313] p-10 mt-5">
+        <nav class="text-white">
+          <h6 class="footer-title">Peddy</h6>
+          <a class="link link-hover">Location: av. Washington 165, NY CA 
+        </a>
+          <a class="link link-hover">54003</a>
+          <a class="link link-hover">Phone: +31 85 964 47 25
+        </a>
+          <a class="link link-hover">Email: info@yourdomain.com
+        </a>
+          <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM
+        </a>
+
+        <div class="flex gap-3">
+            <span><i class="fa-brands fa-facebook"></i></span>
+            <span><i class="fa-brands fa-x-twitter"></i></span>
+            <span><i class="fa-brands fa-youtube"></i></span>
+            <span><i class="fa-brands fa-square-instagram"></i></span>
+        </div>
+        </nav>
+
+        <nav class="text-white">
+          <h6 class="footer-title">Useful Links</h6>
+            <a class="link link-hover">Home
+            </a>
+              <a class="link link-hover">About Us
+            </a>
+              <a class="link link-hover">Animals
+            </a>
+              <a class="link link-hover">Foundation
+            </a>
+              <a class="link link-hover">Contact</a>
+        
+        </nav>
+        
+        <form >
+          <h6 class=" text-white footer-title">Drop a Message</h6>
+            <input
+                type="text"
+                placeholder="Enter Your Email"
+                class="input input-bordered w-full" />
+              <button class="btn bg-[#0e7a81] text-white w-full">Subscribe</button>
+              <p class="text-gray-500 pt-5 text-center"> <i class="fa-solid fa-bolt"></i> Created BY: MD Nasir Uddin (LITON), At Web Devlopment. <br>
+                All right reserved @Peddy 2024
+              </p>
+        </form>
+
+     
+
+</footer>
+  
+   
+     
+
+     <script src="/peddy.js"></script>
+</body>
+</html>
